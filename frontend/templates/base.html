@@ -1,0 +1,32 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="sw">
+{% load static %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="sw">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kampuni ya Magazeti ya Serikali | Tanzania Standard Newspapers">
+    <meta name="keywords" content="TSN, Tanzania, Kampuni, Serikali, Magazeti, Standard, Newspapers">
+    <meta name="csrf-token" content="MXs9xX5ggEzxkQIA6GjGtIG8tnQlCa88vBDsnNVx">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#3e84c0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3e84c0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        TSN | {% block title %}  {% endblock %}
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+    </title>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}My Site Header{% endblock %}</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; {% block footer %}2023 My Site{% endblock %}</p>
+    </footer>
+</body>
+</html>
